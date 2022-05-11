@@ -197,7 +197,7 @@ main{
     padding: 40px 0;
 }
 .sobre{
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
@@ -277,7 +277,6 @@ main{
     align-items: flex-start;
     display: flex;
     flex-wrap: wrap;
-    transition: all 0.3s;
 }
 .titulo-servicos{ 
     text-align: center;
@@ -288,12 +287,13 @@ main{
 .card-servicos{
     justify-content: space-between;
     width: 400px;
+    height: 450px;
     background-color: #c99e67;
     color: #fff;
     align-items: flex-start;
     margin: 10px;
     padding: 10px;
-    transition: transform 0.3s ease-in;
+    transition: all 0.3s;
 }
 .card-servicos:hover{
     cursor:pointer;
@@ -305,7 +305,7 @@ main{
     padding: 10px;
 }
 .card-servicos p{
-    display: none;
+    
     padding-top: 20px;
     text-align: justify; 
 }
@@ -420,7 +420,7 @@ main{
 
 
 /*RESPONSIVIDADE*/
-@media only screen and (max-width: 999px){
+@media screen and (max-width: 999px){
     body{
         overflow-x: hidden;
     }
@@ -429,11 +429,11 @@ main{
         width: 200px;
     }
     .nav-list{
-        position: absolute;
-        top: 13vh;
+        position: fixed;
+        top: 0;
         right: 0;
         width: 50vw;
-        height: 92vh;
+        height: 100vh;
         background: #fff;
         flex-direction: column;
         align-items: center;
@@ -443,15 +443,16 @@ main{
         box-shadow: 1px 1px 8px #888;
     }
     .nav-list li{
-        margin: 0;
-        opacity: 1;
+        margin-left: 0;
     }
     .menumobile{
         display: block;
+        z-index: 999;
     }
     .nav-list.active{
         transform: translateX(0);
     }
+    /*FINAL MENU MOBILE*/
 
     /*MAIN*/
     main{
@@ -481,6 +482,7 @@ main{
     .caracteristicas .card{
         width: 300px;
         height: 220px;
+        margin: 10px;
     }
     .titulo-contato h2{
         text-align: left;
